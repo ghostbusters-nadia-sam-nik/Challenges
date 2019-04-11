@@ -57,16 +57,45 @@ console.log(longest);
 // first array are equal to all the number inputs added in the second array, return true, otherwise, false. Only add
 // together numeric elements but either array may contain non-numeric elements.
 //
-//     var arr1 = ['bob', 1, true, 1, 2];
+// var arr1 = ['bob', 1, true, 1, 2];
 // var arr2 = [2, null, undefined, 0, 2, "apple"]
 // exampleFunction(arr1, arr2) // returns true
 
-// var arr1 = [0, 1, 'kiwi', 'parrot', 3];
-// var arr2 = [2, 'jump', 'basketball', 2];
-//
+
+var arr1 = [0, 1, 'kiwi', 'parrot', 3];
+var arr2 = [2, 'jump', 'basketball', 2];
+
+var stringFiltered = arr1.filter(function(item) {
+    return (item === 0) || (!isNaN(item));
+});
+
+var stringFiltered2 = arr2.filter(function(item) {
+    return (item === 0) || (!isNaN(item));
+});
+
+console.log(stringFiltered, stringFiltered2);
+
+
+function sumOfArrays () {
+    return Number(stringFiltered) + Number(stringFiltered2);
+}
+
+console.log(sumOfArrays);
+
+
 // function isThisTrue (arr1, arr2) {
 //
+//     if (Number(arr1))
+//
 // }
+//
+// isThisTrue(arr1, arr2);
+
+
+
+
+
+
 
 
 
@@ -89,9 +118,8 @@ var string1 = "pizza6";
 var string2 = "rollerskates90";
 
 
-function areCharEqual () {
+function areCharEqual1 () {
     var string_length = string1.length;
-    var string_length2 = string2.length;
 
     if (string1.length >= 6) {
         return "Yes";
@@ -100,31 +128,30 @@ function areCharEqual () {
     }
 }
 
-console.log(areCharEqual(string1));
+console.log(areCharEqual1(string1));
 
-// needs to check character length in the string
-// needs to check number appended to string
-// needs to check if number is equal to characters in string or not
-// needs to output to a yes or no
+function areCharEqual2 () {
+    var string_length2 = string2.length;
 
+    if (string2.length >= 12) {
+        return "Yes";
+    } else {
+        return "No";
+    }
+}
 
-
-
-
-
-
-
-
+console.log(areCharEqual2(string2));
 
 
 
-
-
-// 7. Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt), create an application that will prompt the user to choose from a menu with the following actions:
+// 7. Create a student roster management app. Using the user dialogue functions (alert, confirm, prompt),
+// create an application that will prompt the user to choose from a menu with the following actions:
 //     1) add a student
 // 2) delete a student
 // 3) view all students in alphabetical order
 // 4) view all students in reverse alphabetical
+
+var studentsArr = ['John', 'Ricky', 'Elliot', 'Nikho', 'Johnny', 'Josh'];
 
 
 
@@ -135,8 +162,6 @@ console.log(areCharEqual(string1));
 
 
 // 8. Example of creating a new string of names that have the last letter capitalized...
-
-
 
 
 var names = "Suzanne Emily Alisha";
