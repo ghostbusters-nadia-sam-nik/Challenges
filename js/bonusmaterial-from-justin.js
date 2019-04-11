@@ -11,7 +11,6 @@ function getArrayRandomElement (arr) {
     if (arr && arr.length) {
         return arr[Math.floor(Math.random() * arr.length)];
     }
-    // The undefined will be returned if the empty array was passed
 }
 
 var randomizedDays = getArrayRandomElement(daysArray);
@@ -38,12 +37,36 @@ console.log(getAlphabetIndex());
 
 // 3. Create a function that returns the longest string in a given array of string elements.
 
+var arr = ['short', 'medium', 'longest', 'most longest'];
+
+var lgth = 0;
+var longest;
+
+for(var i = 0; i < arr.length; i++){
+    if(arr[i].length > lgth){
+        lgth = arr[i].length;
+        longest = arr[i];
+    }
+}
+
+console.log(longest);
 
 
-// 4. Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array are equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
+
+// 4. Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the
+// first array are equal to all the number inputs added in the second array, return true, otherwise, false. Only add
+// together numeric elements but either array may contain non-numeric elements.
+//
 //     var arr1 = ['bob', 1, true, 1, 2];
 // var arr2 = [2, null, undefined, 0, 2, "apple"]
 // exampleFunction(arr1, arr2) // returns true
+
+var arr1 = [0, 1, 'kiwi', 'parrot', 3];
+var arr2 = [2, 'jump', 'basketball', 2];
+
+function isThisTrue (arr1, arr2) {
+
+}
 
 
 
@@ -53,11 +76,35 @@ console.log(getAlphabetIndex());
 
 
 
-// 6. Write a program that takes a given string appended with a number at the end. The program will check the length of the string to verify the string is equal to the number appended. If the number appended equals the string length, output "Yes". if the number appended does not equal the string length, output "No".
+// 6. Write a program that takes a given string appended with a number at the end. The program will check the length
+// of the string to verify the string is equal to the number appended. If the number appended equals the string length,
+// output "Yes". if the number appended does not equal the string length, output "No".
 //     Example Input: "geek5"
 // Example Output: "Yes"
 // Example Input: "codingchallenge25"
 // Example Output: "No"
+
+
+var string1 = "pizza6";
+var string2 = "rollerskates90";
+
+
+function //
+
+// needs to check character length in the string
+// needs to check number appended to string
+// needs to check if number is equal to characters in string or not
+// needs to output to a yes or no
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,14 +117,28 @@ console.log(getAlphabetIndex());
 
 
 
+
+
+
+
+
+
 // 8. Example of creating a new string of names that have the last letter capitalized...
-// var names = "Bob Sally Mary";
-// var namesArr = names.split(" ");
-// var newNameStr;
-// var newNamesArr = [];
-// namesArr.forEach(function(name) {
-//     var newName = name.substring(0, name.length - 1) + name[name.length - 1].toUpperCase();
-//     newNamesArr.push(newName);
-// });
-// newNameStr = newNamesArr.join(" ");
-// console.log(newNameStr);
+
+
+
+
+var names = "Suzanne Emily Alisha";
+
+var namesArr = names.split(" ");
+
+var newNameStr;
+
+var newNamesArr = [];
+namesArr.forEach(function(name) {
+    var newName = name.substring(0, name.length - 1) + name[name.length - 1].toUpperCase();
+    newNamesArr.push(newName);
+});
+
+newNameStr = newNamesArr.join(" ");
+console.log(newNameStr);
