@@ -98,16 +98,9 @@ function areCharEqual () {
     } else {
         return "No";
     }
-
-    if (string2.length >= 14) {
-        return "Yes";
-    } else {
-        return "No";
-    }
 }
 
 console.log(areCharEqual(string1));
-console.log(areCharEqual(string2));
 
 // needs to check character length in the string
 // needs to check number appended to string
