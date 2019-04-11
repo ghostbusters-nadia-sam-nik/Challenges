@@ -61,12 +61,12 @@ console.log(longest);
 // var arr2 = [2, null, undefined, 0, 2, "apple"]
 // exampleFunction(arr1, arr2) // returns true
 
-var arr1 = [0, 1, 'kiwi', 'parrot', 3];
-var arr2 = [2, 'jump', 'basketball', 2];
-
-function isThisTrue (arr1, arr2) {
-
-}
+// var arr1 = [0, 1, 'kiwi', 'parrot', 3];
+// var arr2 = [2, 'jump', 'basketball', 2];
+//
+// function isThisTrue (arr1, arr2) {
+//
+// }
 
 
 
@@ -89,7 +89,25 @@ var string1 = "pizza6";
 var string2 = "rollerskates90";
 
 
-function //
+function areCharEqual () {
+    var string_length = string1.length;
+    var string_length2 = string2.length;
+
+    if (string1.length >= 6) {
+        return "Yes";
+    } else {
+        return "No";
+    }
+
+    if (string2.length >= 14) {
+        return "Yes";
+    } else {
+        return "No";
+    }
+}
+
+console.log(areCharEqual(string1));
+console.log(areCharEqual(string2));
 
 // needs to check character length in the string
 // needs to check number appended to string
