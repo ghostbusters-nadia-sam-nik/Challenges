@@ -187,6 +187,59 @@ function addtoage(yearstoadd) {
         users[i].age += yearstoadd
     }
 }
+function disemvowel(string) {
+    var vowel_a = 0;
+    var vowel_e = 0;
+    var vowel_i = 0;
+    var vowel_o = 0;
+    var vowel_u = 0;
+    var vowel_A = 0;
+    var vowel_E = 0;
+    var vowel_I = 0;
+    var vowel_O = 0;
+    var vowel_U = 0;
+    while (vowel_a !== -1){
+        vowel_a = string.indexOf("a");
+        string = string.replace("a","");
+    }
+    while (vowel_a !== -1){
+        vowel_A = string.indexOf("A");
+        string = string.replace("A","");
+    }
+    while (vowel_e !== -1){
+        vowel_e = string.indexOf("e");
+        string = string.replace("e","");
+    }
+    while (vowel_E !== -1){
+        vowel_E = string.indexOf("E");
+        string = string.replace("E","");
+    }
+    while (vowel_i !== -1){
+        vowel_i = string.indexOf("i");
+        string = string.replace("i","");
+    }
+    while (vowel_I !== -1){
+        vowel_I = string.indexOf("I");
+        string = string.replace("I","");
+    }
+    while (vowel_o !== -1){
+        vowel_o = string.indexOf("o");
+        string = string.replace("o","");
+    }
+    while (vowel_O !== -1){
+        vowel_O = string.indexOf("O");
+        string = string.replace("O","");
+    }
+    while (vowel_u !== -1){
+        vowel_u = string.indexOf("u");
+        string = string.replace("u","");
+    }
+    while (vowel_U !== -1){
+        vowel_U = string.indexOf("U");
+        string = string.replace("U","");
+    }
+    return string;
+}
 
 usernames();
 johnDoe();
@@ -200,6 +253,7 @@ var dog = [{
     age: 5,
     color: "white",
     sterilized: false}];
+dog[0].shotRecords = ["rabies","03/25/2015"];
 dog[0].bark = function () {console.log("Bow Wow!!")
 };
 dog[0].getOlder = function () {
@@ -212,8 +266,19 @@ dog[0].fix = function(){
       console.log("Your dog is now fixed")
   }else{
       console.log("Your dog is already fixed")
-  }
+  }};
+dog[0].vaccinate = function(ShotType,DateOfShot){
+    if (dog[0].shotRecords.includes(ShotType)){
+        dog[0].shotRecords.pop();
+        dog[0].shotRecords.push(DateOfShot);
+        console.log("Your dog's " + ShotType + " shot has been updated to the date of " + DateOfShot)
+    }else{
+        dog[0].shotRecords.push(ShotType);
+        dog[0].shotRecords.push(DateOfShot);
+        console.log("we have added the " + ShotType + " shot to our files with the date of " + DateOfShot)
+    }
 };
-console.log(dog[0].age);
+
+console.log(dog[0]);
 
 
