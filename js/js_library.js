@@ -240,6 +240,17 @@ function disemvowel(string) {
     }
     return string;
 }
+function findOutlier(integers){
+    var i;
+    var odd = [];
+    var even = [];
+    for (i = 0; i < integers.length; i++){
+        if (integers[i] % 2 === 0){even.push(integers[i])}
+        else{odd.push(integers[i])}
+    }
+    if (even.length > odd.length){return odd[0]}
+    else{return even[0]}
+}
 
 usernames();
 johnDoe();
