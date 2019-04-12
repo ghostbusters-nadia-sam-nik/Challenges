@@ -149,3 +149,71 @@ function sumOfSquares(num0,num1) {
         return false
     }
 }
+var berverages = [
+    {name: "Budlight",
+    type: "alcoholic",
+    volumeInLiters: 117.35,
+    priceInCents: .83,
+    isOpen: true},
+    {name: "CocaCola",
+    tye: "Carbinated",
+    volumeInLiters: 0.354882,
+    priceInCents: 43,
+    isOpen: false}];
+
+
+var users = [
+    {name: "Sam",
+        age: 21},
+    {name: "Cathy",
+        age: 34},
+    {name: "Karen",
+        age: 43}
+];
+function usernames() {
+    var namestring = "";
+        for (var i = 0; i < users.length; i++) {
+            namestring += users[i].name + " ";
+        }
+        console.log(namestring)
+}
+function johnDoe() {
+    for (var i = 0; i < users.length; i++) {
+        users[i].name = "John Doe"
+    }
+}
+function addtoage(yearstoadd) {
+    for (var i = 0; i < users.length; i++) {
+        users[i].age += yearstoadd
+    }
+}
+
+usernames();
+johnDoe();
+usernames();
+addtoage(1);
+console.log(users[1].age);
+
+var dog = [{
+    breed: "husky",
+    weightInPounds: 13.23,
+    age: 5,
+    color: "white",
+    sterilized: false}];
+dog[0].bark = function () {console.log("Bow Wow!!")
+};
+dog[0].getOlder = function () {
+    dog[0].age += 1;
+    console.log("Your dog has aged by one year and is now " + dog[0].age + " years old.")
+};
+dog[0].fix = function(){
+  if (dog[0].sterilized === false){
+      dog[0].sterilized = true;
+      console.log("Your dog is now fixed")
+  }else{
+      console.log("Your dog is already fixed")
+  }
+};
+console.log(dog[0].age);
+
+
