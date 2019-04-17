@@ -13,6 +13,16 @@
 <!--"1 is odd"-->
 <!--"2 is even"-->
 
+
+<!--10. Write a JavaScript program to construct the following pattern, using a nested for loop.-->
+
+<!--*-->
+<!--* *-->
+<!--* * *-->
+<!--* * * *-->
+<!--* * * * *-->
+
+
 <script>
 
     for (var x = 0; x <= 15; x++) {
@@ -26,6 +36,20 @@
             console.log(x + " is odd");
         }
     }
+
+    var x,y,chr;
+
+    for(x=1; x <=6; x++)
+    {
+        for (y=1; y < x; y++)
+        {
+            chr=chr+("*");
+        }
+        console.log(chr);
+        chr='';
+    }
+
+
 
 </script>
 
