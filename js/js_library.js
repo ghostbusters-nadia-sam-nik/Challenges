@@ -293,3 +293,19 @@ dog[0].vaccinate = function(ShotType,DateOfShot){
 console.log(dog[0]);
 
 
+function reverseNumber(n) {
+    if (n <= 0){
+        array = (""+n).split("");
+        array = array.reverse();
+        array = array.join("");
+        array = array.split();
+        array = array.toString();
+        return -1 * (parseInt(array));
+    }
+    array = (""+n).split("");
+    array = array.reverse();
+    array = array.join("");
+    array = array.split();
+    array = array.toString();
+    return parseInt(array)
+}
