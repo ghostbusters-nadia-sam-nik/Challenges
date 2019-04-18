@@ -6,9 +6,12 @@ window.onload = function() {
         box.style.backgroundImage = 'url("img/yes.jpg")';
     };
     document.getElementById("no").onclick = function() {
-        // box.style.backgroundColor = "green";
         box.style.backgroundImage = 'url("img/nope.jpg")';
-    }
+    };
+    document.getElementById("box").onmouseleave = function() {
+        box.style.backgroundImage = 'url("img/other.jpg")';
+    };
+
 };
 
 
