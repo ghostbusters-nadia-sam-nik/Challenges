@@ -6,11 +6,11 @@ window.onload = function() {
     var position = 0;
 
     var questions = [
-        'Are you confused and wondering if you should date him? <br> Let\'s go!',
-        'Is he kind?',
-        'Is he available (not currently in a relationship or otherwise legally/emotionally committed to someone else)?',
-        'Does he have a job?',
-        'Does he make you laugh?'
+        'Should you should date him? <br><em>Press \'yes\' to continue!</em>',
+        'Is he *KIND*?',
+        'Is he *available* (not currently in a relationship or otherwise legally/emotionally committed to someone else)?',
+        'Does he have a job (or is in school or another training program)?',
+        'Does he make you laugh?',
     ];
 
     document.getElementById("yes").onclick = function() {
@@ -24,6 +24,8 @@ window.onload = function() {
         document.getElementById('questions')
         .innerHTML = "THANK U, NEXT!";
         box.style.backgroundImage = 'url("img/nope.jpg")';
+
+
     };
 
     // document.getElementById("box").onmouseleave = function() {
