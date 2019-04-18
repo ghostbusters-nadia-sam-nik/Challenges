@@ -6,9 +6,11 @@ window.onload = function() {
     var position = 0;
 
     var questions = [
+        'Are you confused and wondering if you should date him? <br> Let\'s go!',
         'Is he kind?',
-        'Is he currently in a relationship or otherwise legally/emotionally committed to someone else?',
+        'Is he available (not currently in a relationship or otherwise legally/emotionally committed to someone else)?',
         'Does he have a job?',
+        'Does he make you laugh?'
     ];
 
     document.getElementById("yes").onclick = function() {
@@ -19,6 +21,8 @@ window.onload = function() {
     };
 
     document.getElementById("no").onclick = function() {
+        document.getElementById('questions')
+        .innerHTML = "THANK U, NEXT!";
         box.style.backgroundImage = 'url("img/nope.jpg")';
     };
 
@@ -30,17 +34,6 @@ window.onload = function() {
         .innerHTML = questions[position];
 
 };
-
-
-
-// var i = 0;  // the index of the current item to show
-//
-// setInterval(function() {            // setInterval makes it run repeatedly
-//     document.getElementById('questions')
-//         .innerHTML = questions[i++];    // get the item and increment i to move to the next
-//     if (i == questions.length) i = 0;   // reset to first element if you've reached the end
-// }, 15000);
-
 
 
 
