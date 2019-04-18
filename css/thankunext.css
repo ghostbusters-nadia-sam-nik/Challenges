@@ -1,0 +1,28 @@
+body {
+    background-color: hotpink;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.questions {
+    text-align: center;
+}
+
+/*.buttons {*/
+
+/*}*/
+
+#box {
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+#buttons {
+    margin-top: 50px;
+    width: 90px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+
